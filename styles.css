@@ -1,0 +1,206 @@
+.background {
+width: 100vw;
+min-height: 100vh;
+background-color: rgb(255, 218, 185);
+background-repeat: no-repeat;
+}
+
+.card {
+  width:fit-content;
+  height: fit-content;
+  justify-content: center;
+  text-align: center;
+  background-image: url("./NRenaesPersonalBlogMain/Japanese_Cherry_Blossoms_Pic.jpg");
+  background-size:contain;
+  min-width: 100px;
+  max-width: 300px;
+  font-weight:bold;
+  color: black;
+  margin: 0 auto;
+  padding: 24px;
+  background: ;
+  border: 1px solid;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+nav {
+  border: 1px solid black;
+}
+
+
+.crumbs ol {
+  list-style-type:lower-greek:
+  padding-left: 0;
+}
+
+
+.crumb {
+  display: inline-block;
+}
+
+
+.crumb a::after {
+  display: inline-block;
+  color: #000;
+  font-size: 70%;
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+
+.main-container {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+grid-column-gap: 15%;
+width: auto;
+height: auto;
+}
+
+.main {
+justify-content: center;
+align-items: center;
+width: auto;
+height: auto;
+font-size: medium;
+font-family: sans-serif, Arial, Times New Roman;
+font-style: italic;
+
+}
+
+
+.container {
+display: grid;
+width: 20vw;
+margin: auto;
+grid-template-columns: repeat(4, 1fr);
+grid-auto-rows: minmax(105px auto);
+grid-gap: 25px;
+grid-template-areas:
+"hd hd hd hd"
+"sd sd main main"
+"ft ft ft ft"
+border: 2px solid rgb(247, 182, 96);
+}
+
+
+.header {
+    grid-area:hd;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow-wrap: break-word;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.footer{
+    grid-area:ft;
+    width: 90vw;
+    min-height: auto;
+    text-align: center;
+    font-size: small;
+    font-family: sans-serif, Arial, Times New Roman;
+    font-weight: bold;
+    font-style:normal;
+}
+
+
+.sidebar {
+  grid-area:sd;
+  text-align:left;
+  border: 2px solid purple;
+  width: fit-content;
+  height: auto;
+  background-color: rgb(188,143,143);
+   
+}
+
+
+.content {
+    grid-area: main;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.box { 
+background: #BC8F8F;  
+padding: 15px;
+height: auto;
+width: auto;
+}
+
+
+.one {
+width: fit-content;
+height: fit-content;
+font-size: 10px;
+font-family: sans-serif, Arial, Times New Roman;
+}
+
+.two {
+  width: fit-content;
+  height: fit-content;
+  font-size: 10px;
+  font-family: sans-serif, Arial, Times New Roman;
+}
+
+.three {
+  width: fit-content;
+  height: fit-content;
+  font-size: 10px;
+  font-family: sans-serif, Arial, Times New Roman;
+}
+
+/* Mobile first */
+		.container{
+  display:grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 400px;
+  grid-template-rows: 200px 1fr 1fr;
+/* grid-template-columns: repeat(3, 1fr); */
+  grid-template-areas:
+"hd hd hd hd"
+"sd sd main main"
+"ft ft ft ft";
+  border: 2px solid purple;
+    }
+
+    /* Medium Screens*/
+    @media(min-width: 600px) {
+		.container{
+			display:grid;
+      width: 100vw;
+      height: 100vh;
+			grid-template-columns: 100px 100px 100px;
+			grid-template-rows: 150 px 300px;
+			grid-template-areas:
+		"hd hd hd hd"
+    "sd sd main main"
+    "ft ft ft ft";
+			Border: 2px solid purple;
+		}
+    }
+/* Large Screens*/
+ @media(min-width: 901px) {
+		.container{
+			display:grid;
+      width: 100vw;
+      height: 100vh;
+			grid-template-columns: 300px 300px 300px;
+			grid-template-rows: 200 px 600px;
+			grid-template-areas:
+		"hd hd hd hd"
+    "sd sd main main"
+    "ft ft ft ft";
+			Border: 2px solid purple;
+    }
+ }
+
